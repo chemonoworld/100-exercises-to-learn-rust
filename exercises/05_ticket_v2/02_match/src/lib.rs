@@ -14,7 +14,7 @@ impl Shape {
             Shape::Square => 4u8,
             Shape::Rectangle => 4u8,
             Shape::Triangle => 3u8,
-            Shape::Pentagon => 5u8
+            Shape::Pentagon => 5u8,
         }
     }
 }
