@@ -32,7 +32,7 @@ pub mod ticket {
 
         // TODO: Add three public methods to the `Ticket` struct:
         //  - `title` that returns the `title` field.
-        pub fn title(&self)-> &str {
+        pub fn title(&self) -> &str {
             &self.title
         }
         //  - `description` that returns the `description` field.

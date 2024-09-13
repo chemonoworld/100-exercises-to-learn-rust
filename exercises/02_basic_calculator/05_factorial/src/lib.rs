@@ -4,7 +4,7 @@ fn factorial(n: u32) -> u32 {
     if n == 0 {
         return 1;
     }
-    factorial(n-1) * n
+    factorial(n - 1) * n
 }
 //
 // The factorial of `n` is defined as the product of all positive integers up to `n`.

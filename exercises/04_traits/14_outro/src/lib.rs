@@ -13,14 +13,12 @@ use std::{fmt::Display, ops::Add, u16};
 
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub struct SaturatingU16 {
-    inner: u16
+    inner: u16,
 }
 
 impl SaturatingU16 {
     pub fn new(from: u16) -> Self {
-        SaturatingU16 {
-            inner: from
-        }
+        SaturatingU16 { inner: from }
     }
 }
 
@@ -35,9 +33,7 @@ impl Add<SaturatingU16> for SaturatingU16 {
 
     fn add(self, rhs: SaturatingU16) -> Self::Output {
         let added = self.inner.saturating_add(rhs.inner);
-        SaturatingU16 {
-            inner: added
-        }
+        SaturatingU16 { inner: added }
     }
 }
 
@@ -46,34 +42,32 @@ impl Add<&SaturatingU16> for SaturatingU16 {
 
     fn add(self, rhs: &SaturatingU16) -> Self::Output {
         let added = self.inner.saturating_add(rhs.inner);
-        SaturatingU16 {
-            inner: added
-        }
+        SaturatingU16 { inner: added }
     }
 }
-
 
 impl Add<SaturatingU16> for u16 {
     type Output = SaturatingU16;
 
     fn add(self, rhs: SaturatingU16) -> Self::Output {
         let added = self.saturating_add(rhs.inner);
-        SaturatingU16 {
-            inner: added
-        }
+        SaturatingU16 { inner: added }
     }
 }
 
-
 impl From<u8> for SaturatingU16 {
     fn from(value: u8) -> Self {
-        SaturatingU16 { inner: value.into() }
+        SaturatingU16 {
+            inner: value.into(),
+        }
     }
 }
 
 impl From<&u8> for SaturatingU16 {
     fn from(value: &u8) -> Self {
-        SaturatingU16 { inner: (*value).into() }
+        SaturatingU16 {
+            inner: (*value).into(),
+        }
     }
 }
 
@@ -103,10 +97,10 @@ impl PartialEq<u16> for SaturatingU16 {
 
 impl Add<u16> for SaturatingU16 {
     type Output = SaturatingU16;
-    
+
     fn add(self, rhs: u16) -> Self::Output {
         SaturatingU16 {
-            inner: self.inner + rhs
+            inner: self.inner + rhs,
         }
     }
 }
@@ -122,4 +116,4 @@ mod tests {
         print!("{}", s16);
         assert_eq!(111, s16_clone);
     }
-} 
+}

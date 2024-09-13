@@ -19,9 +19,7 @@ impl Add<WrappingU32> for WrappingU32 {
 
     fn add(self, rhs: WrappingU32) -> WrappingU32 {
         let added = self.value.wrapping_add(rhs.value);
-        WrappingU32 {
-            value: added
-        }
+        WrappingU32 { value: added }
     }
 }
 

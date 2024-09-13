@@ -17,16 +17,22 @@ struct Ticket {
 }
 
 impl std::fmt::Display for Ticket {
-
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_str(std::format!("title: {}, status: {}, desc: {}", self.title, self.status, self.description).as_str())
+        f.write_str(
+            std::format!(
+                "title: {}, status: {}, desc: {}",
+                self.title,
+                self.status,
+                self.description
+            )
+            .as_str(),
+        )
     }
 
     // fn assert_eq!(t1: &Ticket, t2: &Ticket) -> bool {
     //     t1.title == t2.title && t1.description == t2.description && t1.status == t2.status
     // }
 }
-
 
 #[cfg(test)]
 mod tests {

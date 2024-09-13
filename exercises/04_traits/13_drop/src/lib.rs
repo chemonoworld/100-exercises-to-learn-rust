@@ -24,7 +24,6 @@ impl Drop for DropBomb {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

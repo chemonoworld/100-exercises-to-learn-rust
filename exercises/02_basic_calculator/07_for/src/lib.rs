@@ -4,7 +4,7 @@ pub fn factorial(n: u32) -> u32 {
         return 1;
     }
     let mut result = n;
-    for i in 1..n-1 {
+    for i in 1..n - 1 {
         result *= n - i;
     }
     result

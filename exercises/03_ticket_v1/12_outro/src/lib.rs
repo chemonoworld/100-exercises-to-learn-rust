@@ -6,7 +6,6 @@
 //   Order must include a method named `total` that returns the total price of the order.
 //   Order must provide setters and getters for each field.
 
-
 pub struct Order {
     product_name: String,
     quantity: u32,

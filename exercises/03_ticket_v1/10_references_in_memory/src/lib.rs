@@ -19,7 +19,6 @@ mod tests {
     #[test]
     fn u64_mut_ref_size() {
         assert_eq!(size_of::<&u64>(), 8);
-        
     }
 
     #[test]
